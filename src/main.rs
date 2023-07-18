@@ -1,11 +1,4 @@
 /*
-This line imports the BinaryHeap data structure from the std::collections module.
-BinaryHeap is a priority queue implementation in Rust that will be used to efficiently
-keep track of the number of people in the room at any given time.
-*/
-//use std::collections::BinaryHeap;
-
-/*
 This line defines a function named times that takes a reference to a slice of tuples (i32, i32)
 as input and returns an i32 as the result.
 The tuple represents the entry and exit times of the people in the room.
@@ -47,8 +40,7 @@ The heap will be used to efficiently track the active people in the room.
 */
     let mut count = 0;
     let mut current_people = 0;
-    //let mut heap: BinaryHeap<i32> = BinaryHeap::new();
-
+    
 /*
 This is another loop that iterates over the sorted events vector. For each event, it updates the
 current_people count based on the second element of the tuple
