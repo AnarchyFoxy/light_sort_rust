@@ -3,7 +3,7 @@ This line imports the BinaryHeap data structure from the std::collections module
 BinaryHeap is a priority queue implementation in Rust that will be used to efficiently
 keep track of the number of people in the room at any given time.
 */
-use std::collections::BinaryHeap;
+//use std::collections::BinaryHeap;
 
 /*
 This line defines a function named times that takes a reference to a slice of tuples (i32, i32)
@@ -47,7 +47,7 @@ The heap will be used to efficiently track the active people in the room.
 */
     let mut count = 0;
     let mut current_people = 0;
-    let mut heap: BinaryHeap<i32> = BinaryHeap::new();
+    //let mut heap: BinaryHeap<i32> = BinaryHeap::new();
 
 /*
 This is another loop that iterates over the sorted events vector. For each event, it updates the
@@ -66,4 +66,23 @@ and we increment the count to track the number of times the lights get switched 
 
 //This line returns the count as the result of the times function.
     count
+}
+
+/*
+The main() function contains the test cases, where different input vectors
+are created and passed to the times function.
+The result is then printed using println! statements.
+*/
+fn main() {
+    let test1 = vec![(1, 5), (2, 6), (3, 7)];
+    println!("{}", times(&test1)); // Output: 1
+
+    let test2 = vec![(11, 15), (1, 10), (2, 8), (5, 12)];
+    println!("{}", times(&test2)); // Output: 1
+
+    let test3 = vec![(5, 7), (6, 8), (9, 10), (1, 3), (2, 4)];
+    println!("{}", times(&test3)); // Output: 3
+
+    let test4 = vec![(1, 2), (2, 3), (3, 4)];
+    println!("{}", times(&test4)); // Output: 3
 }
